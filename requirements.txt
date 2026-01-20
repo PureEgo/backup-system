@@ -1,0 +1,39 @@
+# Core dependencies
+mysql-connector-python==8.2.0
+pymysql==1.1.0
+
+# Encryption
+cryptography==41.0.7
+
+# FTP/SFTP
+paramiko==3.4.0
+
+# Notifications
+requests==2.31.0
+
+# Scheduler
+schedule==1.2.0
+python-crontab==3.0.0
+
+# Web interface
+Flask==3.0.0
+Flask-CORS==4.0.0
+
+# Logging
+python-json-logger==2.0.7
+
+# Configuration
+python-dotenv==1.0.0
+
+# Testing
+pytest==7.4.3
+pytest-cov==4.1.0
+
+# Utilities
+python-dateutil==2.8.2
+pytz==2023.3
+
+google-auth==2.23.4
+google-auth-oauthlib==1.1.0
+google-auth-httplib2==0.1.1
+google-api-python-client==2.108.0

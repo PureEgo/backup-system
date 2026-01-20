@@ -1,0 +1,100 @@
+{
+    "_comment": "This is an example configuration file. Copy this to config.json and customize.",
+    
+    "database": {
+        "host": "localhost",
+        "port": 3306,
+        "user": "backup_user",
+        "password": "CHANGE_THIS_PASSWORD",
+        "databases": ["database1", "database2"]
+    },
+    
+    "backup": {
+        "local_path": "./backups",
+        "compression": true,
+        "compression_format": "gzip",
+        "encryption": false,
+        "encryption_key": "",
+        "retention_days": 30,
+        "max_backups": 10,
+        "backup_types": ["full"],
+        "incremental_enabled": false
+    },
+    
+    "storage": {
+        "local": {
+            "enabled": true,
+            "path": "./backups"
+        },
+        "ftp": {
+            "enabled": false,
+            "host": "ftp.example.com",
+            "port": 21,
+            "user": "ftp_user",
+            "password": "CHANGE_THIS",
+            "remote_path": "/backups",
+            "use_ssl": false
+        },
+        "sftp": {
+            "enabled": false,
+            "host": "sftp.example.com",
+            "port": 22,
+            "user": "sftp_user",
+            "password": "CHANGE_THIS",
+            "private_key": "",
+            "remote_path": "/backups"
+        }
+    },
+    
+    "notifications": {
+        "email": {
+            "enabled": false,
+            "smtp_server": "smtp.gmail.com",
+            "smtp_port": 587,
+            "use_tls": true,
+            "sender": "backup@example.com",
+            "password": "CHANGE_THIS_USE_APP_PASSWORD_FOR_GMAIL",
+            "recipients": ["admin@example.com"],
+            "notify_on_success": true,
+            "notify_on_failure": true
+        },
+        "telegram": {
+            "enabled": false,
+            "bot_token": "CHANGE_THIS_YOUR_BOT_TOKEN",
+            "chat_ids": ["CHANGE_THIS_YOUR_CHAT_ID"],
+            "notify_on_success": true,
+            "notify_on_failure": true
+        }
+    },
+    
+    "scheduler": {
+        "enabled": false,
+        "backup_time": "02:00",
+        "backup_interval": "daily",
+        "timezone": "Europe/Warsaw"
+    },
+    
+    "logging": {
+        "level": "INFO",
+        "file": "./logs/backup.log",
+        "max_size_mb": 10,
+        "backup_count": 5,
+        "console_output": true
+    },
+    
+    "web_interface": {
+        "enabled": true,
+        "host": "0.0.0.0",
+        "port": 5000,
+        "debug": false,
+        "secret_key": "CHANGE_THIS_TO_RANDOM_STRING_IN_PRODUCTION"
+    },
+    
+    "google_drive": {
+        "enabled": false,
+        "credentials_file": "./config/google_drive_credentials.json",
+        "token_file": "./config/google_drive_token.pickle",
+        "folder_name": "Database Backups",
+        "folder_id": ""
+    }
+}

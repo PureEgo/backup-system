@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+*.egg-info/
+venv/
+env/
+.venv
+
+# Logs
+logs/
+*.log
+
+# Backups (will be in volume)
+backups/
+*.sql
+*.sql.gz
+
+# Git
+.git
+.gitignore
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+docker-compose.yml
+Dockerfile
+
+# Documentation
+docs/
+README.md
+*.md
+
+# Tests
+tests/
+pytest.ini
+.pytest_cache/
